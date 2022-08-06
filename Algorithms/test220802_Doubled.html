@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Integer</title>
+</head>
+
+<body>
+  <p id="response">x</p>
+</body>
+
+<script>
+  function doubled(array) {
+    let newArray = []
+    array.forEach(element => {
+      newArray.push(element * 2)
+    });
+    return newArray
+  }
+
+  var thisDiv = document.getElementById('response')
+  var x = doubled([-1,-2,-3]).join(',')
+  thisDiv.textContent = 'Answer: ' + x 
+/*
+    Write a function that takes an array of numbers and returns an array with each number doubled. 
+  
+  Ex:
+  Input: [1,2,3]
+  Output: [2,4,6]
+  
+  Input: [-1,-2,-3]
+  Output: [-2, -4, -6]
+    */
+</script>
+
+</html>

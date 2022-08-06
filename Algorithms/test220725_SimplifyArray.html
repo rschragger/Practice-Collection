@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Integer</title>
+</head>
+
+<body>
+  <p id="response-text"></p>
+</body>
+
+<script>
+  function findElement(array, element) {
+    array.forEach(item => {
+      if (item == element){
+        return true
+    }else{
+    return false}
+  })};
+  x = document.getElementById('response-text');
+
+  x.textContent = findElement([1,4, 2, 3], 1)
+/*
+  Write a function that takes 2 parameters - the first is an array, the second is an element that may or may not be in the array. 
+  Without using any built in array methods, return true if the element is in the array or false otherwise. 
+  . 
+  
+  Ex:
+  Input: [1,2,3]  1
+  Output: true
+  
+  Input: [1,2,3]  4
+  Output: false
+  
+  Input: ['code', 'dev', 'nerd']  'nerd'
+  Output: true
+  
+  Input: ['code', 'dev', 'nerd']  'genius'
+  Output: false
+  */
+</script>
+
+</html>

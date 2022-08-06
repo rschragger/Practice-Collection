@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Integer</title>
+</head>
+
+<body>
+  <p id="response-text"></p>
+</body>
+
+<script>
+  var Inp = [ 2, 5, 6, 3, 5 ] ;
+  // var Inp = [1, 3, 4, 1, 3, 4];
+  // var Inp= [ 2, 4, 5 ] ;
+
+  function firstDupl(thisArray) {
+    for (var i = 0; i < thisArray.length; i++) {
+      for (var x = i + 1; x < thisArray.length ; x++) {
+        if (thisArray[i] == thisArray[x]) {
+          return "First duplicate is: " + thisArray[x];
+        }
+      }
+    }
+    return "No result"
+  }
+
+  alert(firstDupl(Inp));
+
+</script>
+
+</html>

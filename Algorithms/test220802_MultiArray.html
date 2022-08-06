@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutli Array</title>
+</head>
+
+<body>
+  <p id="response">x</p>
+</body>
+
+<script>
+  function myFunction(array,input) {
+    let newArray = []
+    array.forEach(element => {
+      newArray.push(eval(element + input))
+    });
+    return newArray
+  }
+
+  var thisDiv = document.getElementById('response')
+  var x = myFunction([1,2,3],'/2').join(',')
+  thisDiv.textContent = 'Answer: ' + x 
+/*
+    Write a function that takes an array of numbers and a function as parameters. The function parameter should do something to a numbers (increment, double, decrement, etc) and return the result. Your function should return the array that results from applying the function parameter to each element in the number array. 
+
+Ex:
+Input: [1,2,3]  function(num){return num * 2*}
+Output: [2,4,6]
+
+Input: [1,2,3]  function(num){return num + 1}
+Output: [2,3,4]
+
+Input: [1,2,3] function(num) {return num /2}
+Output: [.5, 1. 1.5]
+
+Input: [1,2,3] function(num) {return num - 2}
+Output: [-1, 0, 1]
+    */
+</script>
+
+</html>

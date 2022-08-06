@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lib Cong API</title>
+</head>
+
+<body>
+<p id="response-text"></p>
+</body>
+
+<script>
+ var xdata ;
+ var LOCRequestUrl = 'https://www.loc.gov/maps/?q=chicago&sp=1&c=5&fo=json';
+
+var responseText = document.getElementById('response-text');
+
+function getApi(requestUrl) {
+  fetch(requestUrl)
+    .then(function (response) {
+      console.log(response.status);
+      //  Conditional for the the response.status.
+      if (response.status !== 200) {
+        // Place the response.status on the page.
+        responseText.textContent = response.status;
+      }
+      return response.json();
+    })
+    .then(function (data) {
+      // Make sure to look at the response in the console and read how 404 response is structured.
+      console.log(data);
+    window.xdata = data ;
+      responseText.textContent = JSON.stringify(xdata.results[1]) ;
+    });
+}
+
+console.log(getApi(LOCRequestUrl));
+
+
+
+</script>
+
+</html>

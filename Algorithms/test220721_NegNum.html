@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Integer</title>
+</head>
+
+<body>
+  <p id="response-text"></p>
+</body>
+
+<script>
+/*  
+Ex:
+Input: '1'
+Output: -1
+
+Input: '4'
+Output: -4
+
+Input: 'cow'
+Error
+*/
+
+var input= 'cow'
+
+if(typeof input ==="number"){
+  var output = input*-1
+}else{
+  var output = 'error'
+}
+var textDiv = document.getElementById('response-text')
+
+textDiv.textContent = output
+
+
+</script>
+
+</html>
